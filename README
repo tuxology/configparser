@@ -1,0 +1,7 @@
+*Source Files:
+parse.c : The main file which contains file parser APIs
+parse.h : The header file for the parser.
+
+*Example Files:
+profile.conf : Example configuration file.
+example.c : Example showing how to use the parser APIs
