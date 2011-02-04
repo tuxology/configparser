@@ -28,7 +28,7 @@ typedef struct _h_table{
 /* Function Prototypes. */
 HandlerTable *Parser_Init(const char *filename);
 void Parser_Close(HandlerTable *table);
-int Parse_addHandler(const char *keyword,void *handler,HandlerTable *table);
-int Parse_StartParser(HandlerTable *table);
+int Parser_addHandler(const char *keyword,void *handler,HandlerTable *table);
+int Parser_StartParser(HandlerTable *table);
 
 #endif
