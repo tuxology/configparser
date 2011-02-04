@@ -33,7 +33,7 @@ void Parser_Close(HandlerTable *table){
 
 /* Adds handlers to the handler table. */
 /* Returns -1 on error. */
-int Parse_addHandler(const char *keyword,void *handler,HandlerTable *table){
+int Parser_addHandler(const char *keyword,void *handler,HandlerTable *table){
 	Handler *current_handler;
 	
 	if(table==NULL)return -1;
@@ -48,7 +48,7 @@ int Parse_addHandler(const char *keyword,void *handler,HandlerTable *table){
 
 /* To parse the file and call the handlers as an when required. */
 /* This is a very rudimentary parser. I was running out of time handle error corrections here. */
-int Parse_StartParser(HandlerTable *table){
+int Parser_StartParser(HandlerTable *table){
 	char buffer[512],keyword[64],value[448];
 	int index = 0,key_index = 0,value_index = 0;
 	Handler *handler;
@@ -86,4 +86,5 @@ int Parse_StartParser(HandlerTable *table){
 			handler = handler->next;
 		}
 	}	
+	return 0;
 }

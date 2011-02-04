@@ -9,11 +9,11 @@ int main(int argc,char *argv[]){
 	/* Initialize the Parser datastructures */
 	HandlerTable *table = Parser_Init("profile.conf");
 	/* Add handlers to specific keywords. */
-	Parse_addHandler("Name",pName,table);
-	Parse_addHandler("Email",pEmail,table);
-	Parse_addHandler("Address",pAddress,table);
+	Parser_addHandler("Name",pName,table);
+	Parser_addHandler("Email",pEmail,table);
+	Parser_addHandler("Address",pAddress,table);
 	/* Start the parser. */
-	Parse_StartParser(table);
+	Parser_StartParser(table);
 	/* Clean up the parser data structures. */
 	Parser_Close(table);
 
